@@ -1,0 +1,19 @@
+{
+    "name": "tetza/appsalon-mvc",
+    "description": "Proyecto PHP 8, MVC, SASS, Gulp",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./", 
+            "Controllesr\\" : "./controllers", 
+            "Model\\" : "./models"
+        }
+    },
+    "authors": [
+        {
+            "name": "BladimirT",
+            "email": "bladimirtetzaguic@gmail.com"
+        }
+    ],
+    "require": {}
+}
