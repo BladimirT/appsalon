@@ -5,7 +5,7 @@
     "autoload": {
         "psr-4": {
             "MVC\\" : "./", 
-            "Controllesr\\" : "./controllers", 
+            "Controllers\\" : "./controllers", 
             "Model\\" : "./models"
         }
     },
