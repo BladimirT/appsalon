@@ -7,13 +7,12 @@
         grid-template-columns: repeat(2, 1fr);
         min-height: 100vh;
     }
-    
+
     .imagen {
         height: 20rem;
         background-image: url(../img/1.jpg);
         background-size: cover;
         background-position: center center;
-
         @include m.tablet {
             height: auto;
         }
@@ -35,7 +34,7 @@
     @include m.tablet {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items:center;
     }
 
     .boton {

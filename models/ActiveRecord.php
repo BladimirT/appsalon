@@ -109,29 +109,29 @@ class ActiveRecord {
         return $resultado;
     }
 
-    
     // Busca un registro por su id
     public static function find($id) {
-        $query = "SELECT * FROM " . static::$tabla  ." WHERE id = {$id}";
+        $query = "SELECT * FROM " . static::$tabla  ." WHERE id = ${id}";
+
         $resultado = self::consultarSQL($query);
         return array_shift( $resultado ) ;
     }
-    
+
     // Obtener Registros con cierta cantidad
     public static function get($limite) {
-        $query = "SELECT * FROM " . static::$tabla . " LIMIT {$limite}";
+        $query = "SELECT * FROM " . static::$tabla . " LIMIT ${limite}";
         $resultado = self::consultarSQL($query);
         return array_shift( $resultado ) ;
     }
 
-    // Todos los registros
+    // Busca un registro por su id
     public static function where($columna, $valor) {
-        $query = "SELECT * FROM " . static::$tabla ." WHERE {$columna} = '{$valor}'";
+        $query = "SELECT * FROM " . static::$tabla  ." WHERE ${columna} = '${valor}'";
         $resultado = self::consultarSQL($query);
-        return array_shift($resultado);
+        return array_shift( $resultado ) ;
     }
 
-    // Consulta Plana de SQL(Utilizar cuando los metodos del modelo no son suficientes)
+    // Consulta Plana de SQL (Utilizar cuando los métodos del modelo no son suficientes)
     public static function SQL($query) {
         $resultado = self::consultarSQL($query);
         return $resultado;
@@ -141,13 +141,13 @@ class ActiveRecord {
     public function crear() {
         // Sanitizar los datos
         $atributos = $this->sanitizarAtributos();
- 
+
         // Insertar en la base de datos
         $query = " INSERT INTO " . static::$tabla . " ( ";
         $query .= join(', ', array_keys($atributos));
-        $query .= " ) VALUES ('"; 
+        $query .= " ) VALUES (' "; 
         $query .= join("', '", array_values($atributos));
-        $query .= "') ";
+        $query .= " ') ";
         
         // Resultado de la consulta
         $resultado = self::$db->query($query);

@@ -1,15 +1,15 @@
 <h1 class="nombre-pagina">Crear Cuenta</h1>
-<p class="descripcion-pagina">Llena el siguiente formulario para crear una cuenta</p>
+<p class="descripcion-pagina">Llena el siguiente el formulario para crear una cuenta</p>
 
 <?php 
     include_once __DIR__ . "/../templates/alertas.php";
 ?>
 
-<form action="/crear-cuenta" method="POST"  class="formulario">
-
+<form class="formulario" method="POST" action="/crear-cuenta">
+  
     <div class="campo">
         <label for="nombre">Nombre</label>
-        <input 
+        <input
             type="text"
             id="nombre"
             name="nombre"
@@ -20,7 +20,7 @@
 
     <div class="campo">
         <label for="apellido">Apellido</label>
-        <input 
+        <input
             type="text"
             id="apellido"
             name="apellido"
@@ -31,18 +31,18 @@
 
     <div class="campo">
         <label for="telefono">Teléfono</label>
-        <input 
+        <input
             type="tel"
             id="telefono"
             name="telefono"
-            placeholder="Tu teléfono"
+            placeholder="Tu Teléfono"
             value="<?php echo s($usuario->telefono); ?>"
         />
     </div>
 
     <div class="campo">
         <label for="email">E-mail</label>
-        <input 
+        <input
             type="email"
             id="email"
             name="email"
@@ -52,19 +52,21 @@
     </div>
 
     <div class="campo">
-        <label for="email">Contraseña</label>
-        <input 
+        <label for="password">Password</label>
+        <input
             type="password"
             id="password"
             name="password"
-            placeholder="Tu Contraseña"
+            placeholder="Tu Password"
         />
     </div>
 
     <input type="submit" value="Crear Cuenta" class="boton">
+
+
 </form>
 
 <div class="acciones">
-    <a href="/">Iniciar Sesión</a>
-    <a href="/olvide">¿Olvidaste tu Contraseña?</a>
+    <a href="/">¿Ya tienes una cuenta? Inicia Sesión</a>
+    <a href="/olvide">¿Olvidaste tu password?</a>
 </div>

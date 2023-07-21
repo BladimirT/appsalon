@@ -1,19 +1,18 @@
-<h1 class="nombre-pagina">Olvide la Contraseña</h1>
-<p class="descripcion-pagina">Restablece tu contraseña escribiendo tu correo a continuación</p>
+<h1 class="nombre-pagina">Olvide Password</h1>
+<p class="descripcion-pagina">Reestablece tu password escribiendo tu email a continuación</p>
 
-<?php
+<?php 
     include_once __DIR__ . "/../templates/alertas.php";
 ?>
 
-<form action="/olvide" method="POST" class="formulario">
-
+<form class="formulario" action="/olvide" method="POST">
     <div class="campo">
-        <label for="email">Correo</label>
+        <label for="email">Email</label>
         <input 
-            type="email" 
-            name="email" 
-            id="email" 
-            placeholder="Tu Correo"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Tu Email"
         />
     </div>
 
@@ -21,6 +20,6 @@
 </form>
 
 <div class="acciones">
-    <a href="/">Iniciar Sesión</a>
-    <a href="/crear-cuenta">Crear Cuenta</a>
+    <a href="/">¿Ya tienes una cuenta? Inicia Sesión</a>
+    <a href="/crear-cuenta">¿Aún no tienes una cuenta? Crear Una</a>
 </div>

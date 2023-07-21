@@ -5,12 +5,10 @@ namespace Controllers;
 use MVC\Router;
 
 class CitaController {
-    public static function index(Router $router) {
+    public static function index( Router $router ) {
 
-        if(!$_SESSION['nombre']) {
-            session_start();
-        }
-        
+        session_start();
+
         isAuth();
 
         $router->render('cita/index', [

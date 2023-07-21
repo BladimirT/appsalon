@@ -2,10 +2,8 @@
 @use 'base/mixins' as m;
 
 .listado-servicios {
-    
     display: grid;
     gap: 2rem;
-
     @include m.tablet {
         @include m.grid(2, 2rem);
     }
@@ -27,14 +25,12 @@
 
         &:hover {
             transform: scale(1.1);
-            cursor: pointer;
         }
 
         p {
             color: v.$negro;
-            margin: 0 0  calc(v.$separacion / 4 ) 0;
+            margin: 0 0 calc( v.$separacion / 4) 0;
         }
-
         .precio-servicio {
             color: v.$azul;
             font-weight: v.$bold;
