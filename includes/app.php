@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 use Model\ActiveRecord;
 require __DIR__ . '/../vendor/autoload.php';
